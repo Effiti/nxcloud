@@ -69,7 +69,7 @@ pub fn create_file(path: &Path, data: &Bytes) -> Result<()> {
 }
 
 pub fn read_file(path: &Path) -> Result<Bytes> {
-    let contents = fs::read_to_string(path)?;
+    let contents = fs::read(path)?;
     Ok(Bytes::from(contents))
 }
 
